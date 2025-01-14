@@ -183,11 +183,11 @@ export default function Dashboard() {
                     filteredUsers.map((user: any) => (
                         <div
                             key={user.id}
-                            className="bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl"
+                            className="border-2 border-gray-300 bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl"
                         >
                             <div className="flex flex-col space-y-4">
                                 <h3 className="text-xl font-semibold text-gray-800">{user.username}</h3>
-                                <div className="mt-4 flex justify-between items-center">
+                                <div className="mt-4 flex flex-col space-y-2">
                                     <button
                                         onClick={() => viewUser(user.id)}
                                         className="bg-blue-500 text-white py-2 px-6 rounded-md shadow-md transition duration-300 hover:bg-blue-600"
@@ -202,6 +202,7 @@ export default function Dashboard() {
                                             >
                                                 Delete
                                             </button>
+
                                             {user.role === 0 && (
                                                 <button
                                                     onClick={() => promoteUser(user.id)}
@@ -223,5 +224,6 @@ export default function Dashboard() {
                 )}
             </div>
         </div>
+
     );
 }

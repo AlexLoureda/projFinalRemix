@@ -131,7 +131,7 @@ export default function RecipeView() {
     return (
         <div className="container mx-auto px-6 py-8">
             {/* Header del usuario */}
-            <div className="flex justify-between items-center mb-6">
+            <div className=" flex justify-between items-center mb-6">
                 <h2 className="text-3xl font-semibold text-gray-800 dark:text-gray-200">
                     {user?.username || "User"}
                 </h2>
@@ -166,7 +166,7 @@ export default function RecipeView() {
                     recipes.map((recipe: any) => (
                         <div
                             key={recipe.id}
-                            className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
+                            className="border-2 border-gray-300 bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
                         >
                             <div className="flex flex-col space-y-4">
                                 <h3 className="text-xl font-semibold text-gray-800">{recipe.title}</h3>

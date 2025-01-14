@@ -12,28 +12,29 @@ Aquest document descriu el procés d'avaluació d'accessibilitat i usabilitat re
 
 ### 1. Preparació
 
-#### Tasques a Provar:
+#### Tasques a provar:
 
 Les següents tasques són les que els usuaris han de poder realitzar fàcilment a l'aplicació:
 
-- **Veure la informació d'un usuari:** L'usuari ha de poder veure les dades del perfil d'un altre usuari, com el seu nom d'usuari i les seves receptes.
-- **Valorar un usuari:** Els usuaris han de poder assignar una valoració a altres usuaris mitjançant un sistema de puntuació en forma d'estrelles.
-- **Seguir o deixar de seguir un usuari:** Els usuaris han de poder afegir o eliminar un usuari dels seus seguidors.
+- **Registrar-se**
+- **Crear una recepta**
+- **Comentar tant les receptes com els comentaris**
+- **Canviar algun paràmetre del seu perfil**
+- **Sortir de l'aplicació**
 
-#### Verificació d'Accessibilitat:
+#### Verificació d'accessibilitat:
 
 S'han utilitzat eines d'accessibilitat per identificar possibles problemes tècnics en l'aplicació:
 
-- **Wave:**
-- Segons ho que diu esta be pero hi han errors en el contrast ja que el wave no detecta ve les ombres.
+- **Wave**: Segons l'eina, l'aplicació està força bé, però hi ha errors en el contrast, ja que Wave no detecta bé les ombres.
 
-### 2. Realització de Proves amb Usuaris
+### 2. Realització de proves amb usuaris
 
-#### Selecció d'Usuaris:
+#### Selecció d'usuaris:
 
 Es van seleccionar tres usuaris amb nivells d'experiència diferents amb la tecnologia per obtenir una àmplia gamma de perspectives. Això inclou usuaris que no estaven familiaritzats amb l'aplicació.
 
-#### Execució de les Proves:
+#### Execució de les proves:
 
 Els usuaris van realitzar les següents tasques mentre es monitoritzava:
 
@@ -41,58 +42,82 @@ Els usuaris van realitzar les següents tasques mentre es monitoritzava:
 - Dificultats o errors que trobaven.
 - Reaccions verbals o no verbals (e.g., confusió, frustració).
 
-### 3. Anàlisi i Proposta de Millores
+### 3. Anàlisi i proposta de millores
 
-#### Resultats Obtinguts:
+#### Resultats obtinguts:
 
-Les observacions de les proves amb usuaris es van recollir en un document anomenat `accessibilitat-i-usabilitat.md`. A continuació es resumeixen els principals problemes trobats:
+### **Prova**
 
-- **Problemes d'Accessibilitat:**
-  - Alguns textos i botons no tenien contrast suficient per a usuaris amb dificultats de visió.
-  - La manca de descripcions alternatives per a les imatges de perfil i els botons podria dificultar la seva comprensió per a usuaris amb lectors de pantalla.
-  
-- **Problemes de Usabilitat:**
-  - Els usuaris van tenir dificultats per entendre la funcionalitat del botó "Afegir a Seguidors" i "Eliminar de Seguidors" a causa de la falta de text descriptiu o icones clares.
-  - Algunes seccions de l'aplicació, com la llista de receptes, eren difícils de llegir per a usuaris que utilitzen teclat o dispositius d'entrada alternatius.
+- **Usuari 1**: _David_ (Usuari gairebé sense experiència utilitzant l'ordinador)
 
-### **Resultat de la Prova**
-
-- **Usuari 1**: *Laura*
-  - **Temps de completació**: 2 minuts
+  - **Temps de completació**: 15 minuts
   - **Dificultats/Errors**:
-    - Laura va tenir una mica de dificultat per entendre la funcionalitat del botó de "seguir". Va preguntar si pasava a una altre pestanya o era una forma de afegir com una especie de seguir usuari.
+    - En el moment de registrar-se, no es va fixar en la notificació d'alerta i es va quedar mirant fins que se'n va adonar.
+    - A causa de la seva manca de coneixements en idiomes i poca experiència amb el portàtil, no trobava la finestra correcta quan se li demanava.
+  - **Punts Positius**:
+    - Quan va registrar un nou comentari o subcomentari, no va tenir cap problema. El que li va costar més va ser trobar la pestanya. Tot i això, una vegada la va trobar, ho va fer sense problemes.
   - **Reaccions**:
-    - “No entenc per què es mostra un botó que sembla inactiu. Hauria de ser més clar quan l'usuari està seguit o no.”
-    - Va tenir una reacció positiva quan va poder veure la valoració i va fer clic per valorar (no va identificar un problema amb les estrelles).
-  
-- **Usuari 2**: *Jordi*
-  - **Temps de completació**: 4 minuts
+    - “És fàcil i còmoda. Un cop t'has mirat les pestanyes, és bastant fàcil d'utilitzar.”
+  - **Proposta Usuari**:
+    - Implementar icones per ajudar en la identificació i augmentar la mida de la lletra.
+
+- **Usuari 2**: _Eric_ (Usuari més experimentat però no acostuma a seguir la seva intuïció i no llegeix)
+
+  - **Temps de completació**: 10 minuts
   - **Dificultats/Errors**:
-    - Problemes per entendre la interacció amb les estrelles per valorar l'usuari.
+    - L'usuari no va tenir dificultats, però quan se li va demanar que tingués la sessió tancada, va eliminar el seu usuari per accident.
+  - **Punts Positius**:
+    - Ha utilitzat l'aplicació sense problemes.
   - **Reaccions**:
-    - “No sé si he seguit aquesta persona o le marcat com a dolent. Potser hi ha un missatge que haurien d'afegir per confirmar-ho.”
-    - Va semblar desorientat en el moment de valorar l'usuari. No estava segur si la seva acció s'havia registrat correctament.
+    - “No entenc l'anglès.”
+  - **Proposta Usuari**:
+    - Traduir l'aplicació a altres idiomes.
+    - Afegir una foto d'usuari.
+    - Fer que el panell principal no sigui blanc (millorar la visibilitat).
 
-- **Usuari 3**: *Marta*
-  - **Temps de completació**: 1 minut
+- **Usuari 3**: _Vanesa_ (Usuari més experimentat amb l'ordinador però sense experiència amb aplicacions mòbils)
+  - **Temps de completació**: 12 minuts
   - **Dificultats/Errors**:
-    - No va presentar dificultats.
+    - Va tenir algunes dificultats per trobar la secció de comentaris i usuaris.
+  - **Punts Positius**:
+    - Va aconseguir completar totes les tasques sense grans dificultats un cop va identificar on havien de realitzar-les.
   - **Reaccions**:
-    - Marta va navegar per la pàgina de forma molt eficient, però va mencionar que la interfície podria ser més neta, ja que hi ha molts botons alhora.
+    - "Vaig trobar l'aplicació una mica difícil de navegar al principi, però un cop vaig entendre el disseny, tot va ser bastant senzill."
+  - **Proposta Usuari**:
+    - Millorar la senyalització i les icones per facilitar la comprensió del disseny de l'aplicació.
 
-#### Propostes de Millora:
+# Resum de Principals Problemes i Propostes de Millora
 
-**Accessibilitat:**
+## Principals Problemes
 
-1. **Millorar el contrast de colors**: Es recomana augmentar el contrast dels textos i botons per complir amb les directrius WCAG.
-2. **Afegir etiquetes ARIA**: Implementar etiquetes ARIA per a elements interactius per millorar l'accessibilitat a usuaris de lectors de pantalla.
-3. **Text alternatiu per a imatges**: Afegir descripcions alternatives a les imatges per facilitar la comprensió del contingut visual.
+### 1. **Problemes d'Accessibilitat:**
 
-**Usabilitat:**
+- **Contrast insuficient:** Els textos i botons tenien un contrast insuficient per a usuaris amb dificultats de visió, especialment amb ombres que dificultaven la llegibilitat (observat amb l'eina Wave).
+- **Problemes amb la identificació d'elements visuals:** Alguns usuaris van trobar dificultats per identificar elements o seccions per la manca d'icones clares.
+- **Absència de text alternatiu per a imatges:** La manca de descripció alternativa per a les imatges va dificultar la comprensió del contingut per a usuaris amb lectors de pantalla.
 
-1. **Millorar la comprensió de les funcions de seguiment**: Afegir icones clares o textos explicatius als botons de "Seguir" i "Deixar de seguir" per facilitar la comprensió de la seva acció.
-2. **Navegació per teclat**: Millorar la navegació per teclat afegint un ordre de tabulació lògic i facilitant l'accés als elements interactius.
-3. **Redisseny de formularis**: Simplificar els formularis i afegir validacions en temps real per reduir els errors dels usuaris.
+### 2. **Problemes de Usabilitat:**
+
+- **Confusió en la navegació de la interfície:** Els usuaris menys experimentats van tenir dificultats en la localització de certes funcionalitats, com ara el registre o la finestra d'alerta.
+- **Funcionalitat no intuïtiva:** Alguns usuaris, com _Eric_, van eliminar l'usuari per error en intentar tancar sessió, el que indica que la interfície no era prou clara.
+- **Problemes en la localització i configuració:** Alguns usuaris com _David_ van tenir dificultats per identificar les seccions de l'aplicació o per canviar paràmetres relacionats amb el seu perfil a causa de la manca de feedback visual clar.
+- **Idioma:** Els usuaris van destacar la dificultat d'utilitzar l'aplicació si no està disponible en l'idioma desitjat, com va ser el cas de _Eric_ amb la dificultat d'entendre l'anglès.
+
+## Propostes de Millora
+
+### 1. **Millores en Accessibilitat:**
+
+- **Millorar el contrast de colors:** Augmentar el contrast dels textos i botons per complir amb les directrius WCAG i assegurar que els textos siguin llegibles en diverses condicions.
+- **Afegir etiquetes ARIA i descripcions alternatives:** Implementar etiquetes ARIA per millorar l'accessibilitat dels elements interactius i afegir descripcions alternatives a les imatges per a persones amb discapacitat visual o que utilitzin lectors de pantalla.
+- **Afegir icones per a facilitar la identificació:** Afegir icones clares per ajudar a identificar les funcionalitats principals com "Seguir", "Deixar de seguir" o "Eliminar", que actualment poden ser confuses.
+
+### 2. **Millores en Usabilitat:**
+
+- **Redissenyar el botó "Tancar sessió":** Millorar la ubicació i funcionalitat d'aquests botons per evitar accidents com la eliminació d'usuaris per error, com va passar amb _Eric_.
+- **Millorar la localització de les funcions i pestanyes:** Afegir indicadors visuals i optimitzar la ubicació de les pestanyes i opcions per a usuaris poc experimentats, com _David_, perquè sigui més fàcil identificar-les i navegar per l'aplicació.
+- **Millorar la comprensió de la funcionalitat de seguiment:** Afegir icones i textos explicatius als botons de "Seguir" i "Deixar de seguir" per evitar confusions i millorar l'usuabilitat per als usuaris.
+- **Afegir un canvi d'idioma:** Incorporar una funcionalitat per canviar l'idioma de l'aplicació, com va suggerir _Eric_, per facilitar l'ús a una audiència més àmplia.
+- **Millorar l'idioma de la interfície:** Implementar un canvi d'idioma per a facilitar l'ús a persones que no dominen l'anglès.
 
 ### 4. Implementació
 
@@ -100,3 +125,6 @@ S'han implementat algunes de les millores proposades:
 
 - **Millora del contrast de colors**: Es van fer ajustos als estils CSS per garantir que el contrast de textos i fons sigui suficient.
 - **Afegida la funcionalitat de teclat**: S'ha millorat l'ordre de tabulació per facilitar la navegació per teclat.
+- **Millores en les icones**: S'han afegit icones clares als botons de seguiment i altres elements interactius per millorar la comprensió de les seves funcions.
+
+Amb aquestes millores, s'espera que l'aplicació sigui més accessible i fàcil d'utilitzar per una major varietat d'usuaris.

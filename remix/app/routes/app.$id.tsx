@@ -201,7 +201,7 @@ export default function RecipeView() {
     }
 
     return (
-        <div className="container mx-auto px-6 py-8">
+        <div className=" lg:px-40 container px-10 mx-auto py-8">
             <div className="flex justify-between items-center mb-6">
                 <h2 className="text-center text-3xl font-semibold text-gray-800 dark:text-gray-200">
                     {recipe.title}
@@ -214,7 +214,7 @@ export default function RecipeView() {
                     {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
                 </button>
             </div>
-            <div className="bg-white rounded-lg shadow-lg p-6">
+            <div className="bg-white rounded-lg border-2 border-gray-400 shadow-lg p-6">
                 <p className="text-gray-600 text-lg">{recipe.description}</p>
                 <h3 className="text-xl font-bold mt-4">Ingredients:</h3>
                 <p className="text-gray-700">{recipe.ingredients}</p>
@@ -239,7 +239,7 @@ export default function RecipeView() {
                 </div>
 
                 {/* Sección para añadir comentario */}
-                <div className="mt-8">
+                <div className="mt-8 px-10">
                     <h3 className="text-xl font-semibold mb-4">Add a Comment</h3>
 
                     {/* Cuadro de texto para comentario */}
@@ -262,9 +262,9 @@ export default function RecipeView() {
             </div>
 
             {/* Sección para mostrar los comentarios */}
-            <div className="mt-8">
+            <div className="mt-8 px-10 ">
                 <h3 className="text-xl font-semibold mb-4">Comments</h3>
-                <div className="space-y-6">
+                <div className="space-y-6 ">
                     {commentsLoading ? (
                         <p className="text-gray-500">Loading comments...</p>
                     ) : comments.length > 0 ? (
@@ -272,8 +272,8 @@ export default function RecipeView() {
                             .slice()
                             .reverse()
                             .map((comment: any) => (
-                                <div key={comment.id} className="p-4 bg-white rounded-lg shadow">
-                                    <p className="text-gray-600 mb-2">{comment.comment}</p>
+                                <div key={comment.id} className="p-4 bg-gray-100 rounded-lg shadow border-2 border-gray-300">
+                                    <p className="text-black mb-2">{comment.comment}</p>
                                     <p className="text-sm text-gray-500">
                                         Posted on: {formatDate(comment.created_at)}
                                     </p>
@@ -283,9 +283,9 @@ export default function RecipeView() {
                                             {comment.subcomments.map((subcomment: any) => (
                                                 <div
                                                     key={subcomment.id}
-                                                    className="p-2 bg-gray-100 rounded-md"
+                                                    className="p-2 bg-gray-300 rounded-md"
                                                 >
-                                                    <p className="text-gray-600">{subcomment.comment}</p>
+                                                    <p>{subcomment.comment}</p>
                                                     <p className="text-sm text-gray-500">
                                                         Posted on: {formatDate(subcomment.created_at)}
                                                     </p>

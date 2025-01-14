@@ -150,9 +150,9 @@ export default function Dashboard() {
                     filteredRecipes.map((recipe: any) => (
                         <div
                             key={recipe.id}
-                            className="bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
+                            className="border-2 border-gray-300 bg-white rounded-lg shadow-lg p-6 transition-all duration-300 hover:shadow-xl"
                         >
-                            <div className="flex flex-col space-y-4">
+                            <div className="flex flex-col space-y-4 ">
                                 <h3 className="text-xl font-semibold text-gray-800">
                                     {recipe.title}
                                 </h3>
